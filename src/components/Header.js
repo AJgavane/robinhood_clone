@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from '../assets/robinhood.svg'
-import Search from '../assets/search.svg'
+import Logo from '../../assets/robinhood.svg'
+import Search from '../../assets/search.svg'
 
 import '../styles/Header.css'
 
