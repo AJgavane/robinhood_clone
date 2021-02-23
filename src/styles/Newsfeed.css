@@ -1,5 +1,27 @@
 .newsfeed {
-    border: 1px solid orange;
     flex: 0.7;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newsfeed__portfolio {
+    text-align: left;
+}
+
+.newsfeed__portfolio h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 100;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.newsfeed__portfolio p {
+    font-size: 12px;
+    margin-top: 0;
+    line-height: 20px;
+}
+
+.newsfeed__chart {
+    margin-right: 24px;
 }

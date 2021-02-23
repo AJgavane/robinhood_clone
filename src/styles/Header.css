@@ -27,8 +27,12 @@
     border: 1px solid #40494e;
     border-radius: 4px;
     width: 375px;
-    background-color: #1e2124;
+    /* background-color: #1e2124; */
     outline-offset: -2px;
+}
+
+.header__search__container :hover{
+    background-color: #1e2124;
 }
 
 .header__search__container__logo {
@@ -49,6 +53,7 @@
     outline: none;
 }
  
+
 .header__menuItems {
     margin-left: 48px;
     margin-right: 48px;
