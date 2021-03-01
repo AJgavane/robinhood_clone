@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/Newsfeed.css"
 import LineGraph from './LineGraph'
+import Timeline from './Timeline'
 
 function Newsfeed() {
     return (
@@ -16,9 +17,14 @@ function Newsfeed() {
                     {/* Portfolio chart */}
                     <div className="newsfeed__chart">
                         <LineGraph />
+                        <Timeline />
                     </div>
                 </div>
                 {/* Buying Power */}
+                <div className="newsfeed__buying__section">
+                    <h2>Buying Power</h2>
+                    <h2>$9.11</h2>
+                </div>
                 {/* Market News */}
                 {/* Popular lists */}
             </div>
