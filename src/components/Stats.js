@@ -67,7 +67,7 @@ function Stats() {
     return (
         <div className="stats">
             <div className="stats__container">
-                <div className="stats__header">
+                <div className="stats__header stats__list">
                     <p>Stocks</p>
                 </div>
                 <div className="stats__content">
@@ -84,7 +84,7 @@ function Stats() {
                         ))}
                     </div>
                 </div>
-                <div className="stats__header">
+                <div className="stats__header stats__list">
                     <p>Watchlist</p>
                 </div>
                 <div className="stats__content">

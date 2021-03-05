@@ -1,0 +1,38 @@
+.chip {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    border-radius: 18px;
+    padding: 3px 0px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #31363A;
+    cursor: pointer;
+}
+
+.chip:hover {
+    color: #5AC53B;
+    background-color: #31363A ;
+}
+
+.chip__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0px 10px;
+    border: 1px solid #31363A;
+    background-color: #31363A;
+    overflow: hidden;
+    align-items: right;
+}
+
+.chip__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chip__label {
+    padding-right: 10px;
+    font-size: 12px;
+}

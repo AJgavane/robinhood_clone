@@ -3,10 +3,43 @@ import React from 'react'
 import StockSVG from '../../assets/stock.svg'
 import "../styles/StatsRow.css"
 
+import { db } from './firebase'
+
 function StatsRow(props) {
+
+    const buyStock = () => {
+        // console.log("bought", props.name);	// test
+        db.collection('myStocks')
+        .where("ticker", "==", props.name)
+        .get()
+        .then((querySnapShot)=>{
+            if(!querySnapShot.empty){
+                //update the record
+                // console.log("available");   // test
+                querySnapShot.forEach(function(doc) {
+                    // console.log(doc.id, " => ", doc.data());    //test
+                    db.collection('myStocks')
+                    .doc(doc.id)
+                    .update({
+                        shares: doc.data().shares += 1
+                    })
+                })
+            }
+            else {
+                // add a new record
+                // console.log("Unavailable");     //test
+                db.collection('myStocks')
+                .add({
+                    ticker: props.name,
+                    shares: 1
+                })
+            }
+        })
+    }
+
     const percentChange = ( (props.price - props.openPrice)/props.openPrice)*100;
     return (
-        <div className="row">
+        <div className="row" onClick={buyStock}>
             <div className="row__intro">
                 <h1>{props.name}</h1>
                 <p>{props.shares && (props.shares + "shares")}</p>
