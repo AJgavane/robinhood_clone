@@ -1,6 +1,7 @@
 import React from 'react'
 
-import StockSVG from '../../assets/stock.svg'
+import NegStockSVG from '../../assets/negStock.svg'
+import PosStockSVG from '../../assets/posStock.svg'
 import "../styles/StatsRow.css"
 
 import { db } from './firebase'
@@ -38,6 +39,8 @@ function StatsRow(props) {
     }
 
     const percentChange = ( (props.price - props.openPrice)/props.openPrice)*100;
+    let icon = (percentChange > 0) ? PosStockSVG : NegStockSVG;
+    let trend = (percentChange > 0) ? "positive" : "negative";
     return (
         <div className="row" onClick={buyStock}>
             <div className="row__intro">
@@ -45,11 +48,11 @@ function StatsRow(props) {
                 <p>{props.shares && (props.shares + "shares")}</p>
             </div>
             <div className="row__chart">
-                <img src={StockSVG} height={16} />
+                <img src={icon} height={16} />
             </div>
 	  			<div className="row__numbers">
 	  				<p className="row__price">{props.price}</p>
-	  				<p className="row__percentage">{Number(percentChange).toFixed(2)}</p>
+	  				<p className={`row__percentage ${trend}`}>{Number(percentChange).toFixed(2)}</p>
 	  			</div>
         </div>
     )

@@ -1,3 +1,8 @@
+:root {
+    --main-red: #ff5100;
+    --main-green: #5AC53B;
+}
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -37,6 +42,10 @@
     padding-bottom: 4px;
 }
 
-.row__percentage {
-    color: #5AC53B;
+.row__percentage.negative {
+    color: var(--main-red);
+}
+
+.row__percentage.positive {
+    color: var(--main-green);
 }

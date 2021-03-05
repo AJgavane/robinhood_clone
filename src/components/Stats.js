@@ -46,7 +46,7 @@ function Stats() {
 
     useEffect(() => {
         let tempStockData = [];
-        const stockList = ["TSLA", "TTM", "ARKW", "NVDA", "DAL", "ARKQ"];
+        const stockList = ["TSLA", "TTM", "ARKW", "NVDA", "DAL", "ARKQ", "SU"];
         let promises = [];
         getMyStocks();
         stockList.map((stock)=> {
